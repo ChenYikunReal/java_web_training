@@ -21,7 +21,10 @@
     <div id="container">
         <div id="output">
             <div class="containerT">
-                <font color="#dc143c"><h1>登录失败</h1></font>
+                <form class="form" id="entry_form" action="/web/LogInServlet" method="post">
+                    <label><font color="#dc143c">用户名或密码错误 登录失败</font></label>
+                    <input type="button" id="back_btn" onclick="location.href='login.jsp'" value="返回"/>
+                </form>
             </div>
         </div>
     </div>

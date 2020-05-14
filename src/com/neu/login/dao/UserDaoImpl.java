@@ -17,28 +17,29 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
-    public int addUser(User user) throws Exception {
+    public boolean addUser(String username, String password, String telephone) throws Exception {
         int count = 0;
-        String sql = "insert into user_login (user_id, username, password, telephone)values(?,?,?,?);";
+        String sql = "insert into user_login (username, password, telephone)values(?,?,?);";
         PreparedStatement preparedStatement = null;
         try {
             preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1, user.getUserName());
-            preparedStatement.setString(2, user.getPassword());
+            preparedStatement.setString(1, username);
+            preparedStatement.setString(2, password);
+            preparedStatement.setString(3, telephone);
             count = preparedStatement.executeUpdate();
             if (count >= 1) {
-                System.out.println("添加用户成功!");
+                return true;
             } else {
-                System.out.println("没有添加任何用户!");
+                System.err.println("没有添加任何用户!");
             }
         } catch (SQLException e) {
-            System.out.println("建立通道失败");
+            System.err.println("建立通道失败");
             e.printStackTrace();
             throw new Exception("添加用户失败");
         } finally {
             MySQLConnector.closeConnection(null, preparedStatement, connection);
         }
-        return count;
+        return false;
     }
 
     @Override

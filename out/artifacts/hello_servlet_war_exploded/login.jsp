@@ -23,10 +23,11 @@
 		    <div class="containerT">
 			    <h1>用户登录</h1>
 			    <form class="form" id="entry_form" action="/web/LogInServlet" method="post">
-				    <input type="text" placeholder="用户名" name="username">
-				    <input type="password" placeholder="密码" name="password">
-				    <button type="submit" id="entry_btn">登录</button>
-                    <button type="button" id="register_btn" onclick="location.href='register.jsp'">注册</button>
+				    <input type="text" placeholder="用户名" name="username"/>
+				    <input type="password" placeholder="密码" name="password"/>
+                    <input type="submit" id="login_btn" value="登录"/>
+                    <input type="reset" id="reset_btn" value="重置"/>
+                    <input type="button" id="register_btn" onclick="location.href='register.jsp'" value="注册"/>
 			    </form>
 		    </div>
 	    </div>

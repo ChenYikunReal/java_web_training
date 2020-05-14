@@ -7,12 +7,14 @@ import java.util.List;
 public interface UserDao {
 
     /**
-     * 增加新用户
-     * @param user
+     * 注册新用户
+     * @param username 用户提交的合法用户名
+     * @param password 用户提交的合法密码
+     * @param telephone 用户提交的合法电话号码
      * @return
      * @throws Exception
      */
-    int addUser(User user) throws Exception;
+    boolean addUser(String username, String password, String telephone) throws Exception;
 
     /**
      * 删除已有用户
