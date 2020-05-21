@@ -19,4 +19,20 @@
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/RegisterServlet</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>LogInIndexServlet</servlet-name>
+        <servlet-class>com.neu.login.servlet.LogInIndexServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogInIndexServlet</servlet-name>
+        <url-pattern>/LogInIndexServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ExitServlet</servlet-name>
+        <servlet-class>com.neu.login.servlet.ExitServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ExitServlet</servlet-name>
+        <url-pattern>/ExitServlet</url-pattern>
+    </servlet-mapping>
 </web-app>

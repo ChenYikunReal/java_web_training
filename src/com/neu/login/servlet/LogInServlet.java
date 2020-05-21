@@ -9,6 +9,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class LogInServlet extends HttpServlet {
 
@@ -20,10 +21,12 @@ public class LogInServlet extends HttpServlet {
         try {
             UserService service = new UserServiceImpl();
             User user = service.login(username, password);
-            if(user != null){
-                request.getRequestDispatcher("/success.jsp").forward(request,response);
-            }
-            else {
+            if(user != null) {
+                HttpSession session = request.getSession();
+                user.setPassword("*".repeat(password.length()));
+                session.setAttribute("user", user);
+                response.sendRedirect("LogInIndexServlet");
+            } else {
                 request.getRequestDispatcher("/defeat.jsp").forward(request,response);
             }
         } catch (Exception e) {

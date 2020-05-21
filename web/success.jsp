@@ -1,3 +1,5 @@
+<%@ page import="com.neu.login.vo.User" %>
+<%@ page import="java.io.PrintWriter" %>
 <%--
   Created by IntelliJ IDEA.
   User: yk
@@ -6,6 +8,33 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    if(session != null){
+        User user = (User) session.getAttribute("user");
+        if (user != null) {
+            String username = user.getUserName();
+            String password = user.getPassword();
+            String telephoneNumber = user.getTelephoneNumber();
+            if(username != null && !username.equals("") && password != null && !password.equals("")){
+                request.setAttribute("username_value", username);
+                request.setAttribute("password_value", password);
+                request.setAttribute("tel_num_value", telephoneNumber == null ? "" : telephoneNumber);
+//                out.println("<script type=\"text/javascript\">$(function () {username.value =" + username +
+//                        ";password.value=" + password +";})</script>");
+//                out.println("<script>function show_user_info(){document.getElementById(\"username\").innerText=\"" +
+//                        username + "\";document.getElementById(\"password\").innerText=\"" + password + "\";</script>}");
+//                out.println("<script>show_user_info();</script>");
+//                if (telephoneNumber != null) {
+//                    out.println("<script type=\"text/javascript\">$(function () {tel_num.value =" + telephoneNumber +
+//                            ";})</script>");
+//                    out.println("<script>function show_user_tel() {document.getElementById(\"tel_num\").innerText=\"" +
+//                            telephoneNumber + "\";</script>}");
+//                    out.println("<script>show_user_tel();</script>");
+//                }
+            }
+        }
+    }
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,10 +47,23 @@
     <script type="text/javascript" src="js/vector.js"></script>
 </head>
 <body>
+    <script type="text/javascript">
+        $(function () {
+            username.value = "<%=request.getAttribute("username_value")%>";
+            password.value = "<%=request.getAttribute("password_value")%>";
+            tel_num.value = "<%=request.getAttribute("tel_num_value")%>";
+        })
+    </script>
     <div id="container">
         <div id="output">
             <div class="containerT">
-                <font color="#dc143c"><h1>登录成功</h1></font>
+                <font color="#dc143c"><h1>欢迎！你登录成功</h1></font>
+                <form class="form" id="entry_form" action="/web/ExitServlet" method="post">
+                    <input type="text" id="username" name="username" value="" readonly/>
+                    <input type="text" id="password" name="password" value="" readonly/>
+                    <input type="text" id="tel_num" name="tel_num" value="" readonly/>
+                    <input type="submit" id="exit_btn" value="退出系统"/>
+                </form>
             </div>
         </div>
     </div>
