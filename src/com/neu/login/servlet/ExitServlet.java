@@ -21,6 +21,10 @@ public class ExitServlet extends HttpServlet {
         session.setAttribute("username_value", null);
         session.setAttribute("password_value", null);
         session.setAttribute("tel_num_value", null);
+        //session.removeAttribute("user");
+        //session.removeAttribute("username_value");
+        //session.removeAttribute("password_value");
+        //session.removeAttribute("tel_num_value");
         response.setHeader("refresh","0;URL=login.jsp");
     }
 
