@@ -1,5 +1,4 @@
 <%@ page import="com.neu.login.vo.User" %>
-<%@ page import="java.io.PrintWriter" %>
 <%--
   Created by IntelliJ IDEA.
   User: yk
@@ -19,18 +18,6 @@
                 request.setAttribute("username_value", username);
                 request.setAttribute("password_value", password);
                 request.setAttribute("tel_num_value", telephoneNumber == null ? "" : telephoneNumber);
-//                out.println("<script type=\"text/javascript\">$(function () {username.value =" + username +
-//                        ";password.value=" + password +";})</script>");
-//                out.println("<script>function show_user_info(){document.getElementById(\"username\").innerText=\"" +
-//                        username + "\";document.getElementById(\"password\").innerText=\"" + password + "\";</script>}");
-//                out.println("<script>show_user_info();</script>");
-//                if (telephoneNumber != null) {
-//                    out.println("<script type=\"text/javascript\">$(function () {tel_num.value =" + telephoneNumber +
-//                            ";})</script>");
-//                    out.println("<script>function show_user_tel() {document.getElementById(\"tel_num\").innerText=\"" +
-//                            telephoneNumber + "\";</script>}");
-//                    out.println("<script>show_user_tel();</script>");
-//                }
             }
         }
     }
