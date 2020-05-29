@@ -32,6 +32,8 @@ public interface UserDao {
      */
     int updateUser(User user) throws Exception;
 
+    int addVip(String id) throws Exception;
+
     /**
      * 根据ID查User
      * @param userId

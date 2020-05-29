@@ -34,22 +34,17 @@
     <script type="text/javascript" src="js/vector.js"></script>
 </head>
 <body>
-    <script type="text/javascript">
-        $(function () {
-            username.value = "<%=request.getAttribute("username_value")%>";
-            password.value = "<%=request.getAttribute("password_value")%>";
-            tel_num.value = "<%=request.getAttribute("tel_num_value")%>";
-        })
-    </script>
     <div id="container">
         <div id="output">
             <div class="containerT">
                 <font color="#dc143c"><h1>欢迎！你登录成功</h1></font>
                 <form class="form" id="entry_form" action="/web/ExitServlet" method="post">
-                    <input type="text" id="username" name="username" value="" readonly/>
-                    <input type="text" id="password" name="password" value="" readonly/>
-                    <input type="text" id="tel_num" name="tel_num" value="" readonly/>
+                    <input type="text" id="username" name="username" value="<%=request.getAttribute("username_value")%>" readonly/>
+                    <input type="text" id="password" name="password" value="<%=request.getAttribute("password_value")%>" readonly/>
+                    <input type="text" id="tel_num" name="tel_num" value="<%=request.getAttribute("tel_num_value")%>" readonly/>
                     <input type="submit" id="exit_btn" value="退出系统"/>
+                    <input type="button" id="show_vip_btn" onclick="location.href='show_vips.jsp'" value="查看VIP"/>
+                    <input type="button" id="add_vip_btn" onclick="location.href='add_vips.jsp'" value="增加VIP"/>
                 </form>
             </div>
         </div>

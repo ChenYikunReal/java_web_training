@@ -31,11 +31,19 @@
         <url-pattern>/LogInIndexServlet</url-pattern>
     </servlet-mapping>
     <servlet>
-        <servlet-name>ExitServlet</servlet-name>
-        <servlet-class>com.neu.login.servlet.ExitServlet</servlet-class>
-    </servlet>
+    <servlet-name>ExitServlet</servlet-name>
+    <servlet-class>com.neu.login.servlet.ExitServlet</servlet-class>
+</servlet>
     <servlet-mapping>
         <servlet-name>ExitServlet</servlet-name>
         <url-pattern>/ExitServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AddVipServlet</servlet-name>
+        <servlet-class>com.neu.login.servlet.AddVipServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddVipServlet</servlet-name>
+        <url-pattern>/AddVipServlet</url-pattern>
     </servlet-mapping>
 </web-app>

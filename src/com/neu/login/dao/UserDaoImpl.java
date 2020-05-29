@@ -19,7 +19,7 @@ public class UserDaoImpl implements UserDao {
     @Override
     public boolean addUser(String username, String password, String telephone) throws Exception {
         int count = 0;
-        String sql = "insert into user_login (username, password, telephone)values(?,?,?);";
+        String sql = "insert into user_login (username, password, telephone, vip)values(?,?,?,0);";
         PreparedStatement preparedStatement = null;
         try {
             preparedStatement = connection.prepareStatement(sql);
@@ -86,6 +86,30 @@ public class UserDaoImpl implements UserDao {
             System.out.println("建立通道失败");
             e.printStackTrace();
             throw new Exception("修改用户失败");
+        } finally {
+            MySQLConnector.closeConnection(null, preparedStatement, connection);
+        }
+        return count;
+    }
+
+    @Override
+    public int addVip(String id) throws Exception{
+        int count;
+        String sql = "update user_login set vip=1 where user_id=?";
+        PreparedStatement preparedStatement = null;
+        try {
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, id);
+            count = preparedStatement.executeUpdate();
+            if (count >= 1) {
+                System.out.println("修改用户成功!");
+            } else {
+                System.out.println("没有修改任何用户!");
+            }
+        } catch (SQLException e) {
+            System.out.println("建立通道失败");
+            e.printStackTrace();
+            throw new Exception("新增VIP失败");
         } finally {
             MySQLConnector.closeConnection(null, preparedStatement, connection);
         }
