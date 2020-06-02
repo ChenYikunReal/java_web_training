@@ -45,6 +45,7 @@
                     <input type="submit" id="exit_btn" value="退出系统"/>
                     <input type="button" id="show_vip_btn" onclick="location.href='show_vips.jsp'" value="查看VIP"/>
                     <input type="button" id="add_vip_btn" onclick="location.href='add_vips.jsp'" value="增加VIP"/>
+                    <input type="button" id="show_user_btn" onclick="location.href='show_users.jsp'" value="查看用户"/>
                 </form>
             </div>
         </div>

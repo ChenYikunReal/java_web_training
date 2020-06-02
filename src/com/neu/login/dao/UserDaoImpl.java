@@ -67,15 +67,39 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
-    public int updateUser(User user) throws Exception{
-        int count;
-        String sql = "update user_login set username=?, password=? where user_id=?";
+    public int deleteUserById(String id) throws Exception{
+        int count = 0;
+        String sql = "delete from user_login where user_id=?";
         PreparedStatement preparedStatement = null;
         try {
             preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1, user.getUserName());
-            preparedStatement.setString(2, user.getPassword());
-            preparedStatement.setInt(3, user.getUserId());
+            preparedStatement.setString(1, id);
+            count = preparedStatement.executeUpdate();
+            if (count >= 1) {
+                System.out.println("删除用户成功!");
+            } else {
+                System.out.println("没有删除任何用户!");
+            }
+        } catch (SQLException e) {
+            System.out.println("建立通道失败");
+            e.printStackTrace();
+            throw new Exception("删除用户失败");
+        } finally {
+            MySQLConnector.closeConnection(null, preparedStatement, connection);
+        }
+        return count;
+    }
+
+    @Override
+    public int updateUser(String id, String name, String telephone) throws Exception{
+        int count;
+        String sql = "update user_login set username=?, telephone=? where user_id=?";
+        PreparedStatement preparedStatement = null;
+        try {
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, name);
+            preparedStatement.setString(2, telephone);
+            preparedStatement.setString(3, id);
             count = preparedStatement.executeUpdate();
             if (count >= 1) {
                 System.out.println("修改用户成功!");

@@ -24,13 +24,14 @@ public interface UserDao {
      */
     int deleteUser(User user) throws Exception;
 
+    int deleteUserById(String id) throws Exception;
+
     /**
      * 修改已有用户信息
-     * @param user
      * @return
      * @throws Exception
      */
-    int updateUser(User user) throws Exception;
+    int updateUser(String id, String name, String telephone) throws Exception;
 
     int addVip(String id) throws Exception;
 

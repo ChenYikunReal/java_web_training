@@ -2,15 +2,15 @@ package com.neu.login.servlet;
 
 import com.neu.login.dao.UserDao;
 import com.neu.login.dao.UserDaoImpl;
+import com.neu.login.vo.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-public class AddVipServlet extends HttpServlet {
+public class UpdateUserServlet extends HttpServlet {
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -19,14 +19,15 @@ public class AddVipServlet extends HttpServlet {
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String id = request.getParameter("id");
+        request.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html;charset=UTF-8");
         UserDao dao = new UserDaoImpl();
         try {
-            dao.addVip(id);
+            dao.updateUser(request.getParameter("id"), request.getParameter("name"), request.getParameter("telephone"));
         } catch (Exception e) {
             e.printStackTrace();
         }
-        response.sendRedirect("add_vips.jsp");
+        response.sendRedirect("show_users.jsp");
     }
 
 }
