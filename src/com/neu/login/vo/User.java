@@ -14,14 +14,16 @@ public class User {
 
     private String telephoneNumber;
 
-    public User() {
-    }
+    private Integer isVip;
 
-    public User(Integer userId, String userName, String password, String tel) {
+    public User() {}
+
+    public User(Integer userId, String userName, String password, String tel, Integer isVip) {
         this.userId = userId;
         this.userName = userName;
         this.password = password;
         this.telephoneNumber = tel;
+        this.isVip = isVip;
     }
 
     public Integer getUserId() {
@@ -56,11 +58,23 @@ public class User {
         this.telephoneNumber = telephoneNumber;
     }
 
-    @Override
-    public String toString() {
-        return "User [userId=" + userId + ", userName=" + userName
-                + ", password=" + password + ", telephoneNumber=" + telephoneNumber + "]";
+    public Integer getIsVip() {
+        return isVip;
     }
 
+    public void setIsVip(Integer isVip) {
+        this.isVip = isVip;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId=" + userId +
+                ", userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", telephoneNumber='" + telephoneNumber + '\'' +
+                ", isVip=" + isVip +
+                '}';
+    }
 }
 

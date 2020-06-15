@@ -53,11 +53,12 @@ public interface UserDao {
 
     /**
      * 根据SQL语句查询记录总数
-     * @param sql SQL语句
      * @return 记录总数
      * @throws Exception
      */
-    int getTotalRecordSum(String sql) throws Exception;
+    int getTotalRecordSum() throws Exception;
+
+    List<User> queryByPage(int page, int size) throws Exception;
 
 }
 
