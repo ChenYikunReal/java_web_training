@@ -1,8 +1,8 @@
-package com.neu.login.servlet;
+package com.web.login.servlet;
 
-import com.neu.login.dao.UserDao;
-import com.neu.login.dao.UserDaoImpl;
-import com.neu.login.vo.User;
+import com.web.login.dao.UserDao;
+import com.web.login.dao.UserDaoImpl;
+import com.web.login.vo.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

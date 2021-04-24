@@ -1,10 +1,7 @@
-package com.neu.login.util;
+package com.web.login.util;
 
 import java.sql.*;
 
-/**
- * 数据库驱动加载的工具类
- */
 public class MySQLConnector {
 
     public static Connection getConnection(){

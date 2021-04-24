@@ -1,6 +1,6 @@
-package com.neu.login.servlet;
+package com.web.login.servlet;
 
-import com.neu.login.vo.User;
+import com.web.login.vo.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.*;

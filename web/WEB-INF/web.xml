@@ -8,7 +8,7 @@
     </welcome-file-list>
     <servlet>
         <servlet-name>LogInServlet</servlet-name>
-        <servlet-class>com.neu.login.servlet.LogInServlet</servlet-class>
+        <servlet-class>com.web.login.servlet.LogInServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>LogInServlet</servlet-name>
@@ -16,7 +16,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>RegisterServlet</servlet-name>
-        <servlet-class>com.neu.login.servlet.RegisterServlet</servlet-class>
+        <servlet-class>com.web.login.servlet.RegisterServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
@@ -24,7 +24,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>LogInIndexServlet</servlet-name>
-        <servlet-class>com.neu.login.servlet.LogInIndexServlet</servlet-class>
+        <servlet-class>com.web.login.servlet.LogInIndexServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>LogInIndexServlet</servlet-name>
@@ -32,7 +32,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>ExitServlet</servlet-name>
-        <servlet-class>com.neu.login.servlet.ExitServlet</servlet-class>
+        <servlet-class>com.web.login.servlet.ExitServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ExitServlet</servlet-name>
@@ -40,7 +40,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>AddVipServlet</servlet-name>
-        <servlet-class>com.neu.login.servlet.AddVipServlet</servlet-class>
+        <servlet-class>com.web.login.servlet.AddVipServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>AddVipServlet</servlet-name>
@@ -48,7 +48,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>UpdateUserServlet</servlet-name>
-        <servlet-class>com.neu.login.servlet.UpdateUserServlet</servlet-class>
+        <servlet-class>com.web.login.servlet.UpdateUserServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>UpdateUserServlet</servlet-name>
@@ -56,7 +56,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>DeleteUserServlet</servlet-name>
-        <servlet-class>com.neu.login.servlet.DeleteUserServlet</servlet-class>
+        <servlet-class>com.web.login.servlet.DeleteUserServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>DeleteUserServlet</servlet-name>
@@ -64,7 +64,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>QueryByPageServlet</servlet-name>
-        <servlet-class>com.neu.login.servlet.QueryByPageServlet</servlet-class>
+        <servlet-class>com.web.login.servlet.QueryByPageServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>QueryByPageServlet</servlet-name>

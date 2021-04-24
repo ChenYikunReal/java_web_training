@@ -1,9 +1,5 @@
-package com.neu.login.vo;
+package com.web.login.vo;
 
-/**
- * 系统用户类
- * 这是一个实体类
- */
 public class User {
 
     private Integer userId;

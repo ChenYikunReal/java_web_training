@@ -1,7 +1,7 @@
 <%@ page import="java.util.List" %>
-<%@ page import="com.neu.login.vo.User" %>
-<%@ page import="com.neu.login.dao.UserDao" %>
-<%@ page import="com.neu.login.dao.UserDaoImpl" %>
+<%@ page import="com.web.login.vo.User" %>
+<%@ page import="com.web.login.dao.UserDao" %>
+<%@ page import="com.web.login.dao.UserDaoImpl" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>

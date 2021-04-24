@@ -1,7 +1,7 @@
-package com.neu.login.dao;
+package com.web.login.dao;
 
-import com.neu.login.util.MySQLConnector;
-import com.neu.login.vo.User;
+import com.web.login.util.MySQLConnector;
+import com.web.login.vo.User;
 
 import java.sql.*;
 

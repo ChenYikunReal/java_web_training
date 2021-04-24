@@ -1,7 +1,7 @@
-package com.neu.login.servlet;
+package com.web.login.servlet;
 
-import com.neu.login.service.UserService;
-import com.neu.login.service.UserServiceImpl;
+import com.web.login.service.UserService;
+import com.web.login.service.UserServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

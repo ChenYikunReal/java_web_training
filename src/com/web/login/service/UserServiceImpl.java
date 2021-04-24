@@ -1,8 +1,8 @@
-package com.neu.login.service;
+package com.web.login.service;
 
-import com.neu.login.dao.UserDao;
-import com.neu.login.dao.UserDaoImpl;
-import com.neu.login.vo.User;
+import com.web.login.dao.UserDao;
+import com.web.login.dao.UserDaoImpl;
+import com.web.login.vo.User;
 
 import java.util.List;
 

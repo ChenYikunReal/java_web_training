@@ -1,11 +1,4 @@
-<%@ page import="com.neu.login.vo.User" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: yk
-  Date: 2020/3/20
-  Time: 10:35
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="com.web.login.vo.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     if(session != null){

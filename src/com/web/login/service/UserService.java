@@ -1,6 +1,6 @@
-package com.neu.login.service;
+package com.web.login.service;
 
-import com.neu.login.vo.User;
+import com.web.login.vo.User;
 
 public interface UserService {
 

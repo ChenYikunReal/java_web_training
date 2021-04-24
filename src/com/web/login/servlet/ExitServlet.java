@@ -1,4 +1,4 @@
-package com.neu.login.servlet;
+package com.web.login.servlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
